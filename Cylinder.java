@@ -14,17 +14,17 @@ import java.util.Scanner;
 
 
 
-	System.out.print("Enter the radius of the circle: ");
+	System.out.print("Enter the radius of the cylinder: ");
 	radius = calculation.nextInt();
 
 	System.out.println("Enter the length: " );
 	length = calculation.nextInt();
 
 	double area = PIE * (radius * radius);
-	System.out.println("The area of the circle is: " + area);
+	System.out.println("The area of the cylinder is: " + area);
 
 	double volume = area * length;
-	System.out.println("The volume of the circle is: " + volume);
+	System.out.println("The volume of the cylinder is: " + volume);
 }
 
 
