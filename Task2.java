@@ -5,11 +5,11 @@ public class Task2{
 	public static void main(String[] args){
 
 
-	int x;
+	int variablex;
 
-	int y;
+	int variabley;
 
-	int z;
+	int variablez;
 	
 	
 
@@ -17,17 +17,17 @@ public class Task2{
 
 	System.out.println(" Enter first interger");
 
-		x = product.nextInt();
+		variablex = product.nextInt();
 
 	System.out.println(" Enter second interger");
 
-		y = product.nextInt();
+		variabley = product.nextInt();
 
 	System.out.println(" Enter third interger");
 
-		z = product.nextInt();
+		variablez = product.nextInt();
 
-	int result = x * y * z;
+	int result = variablex * variabley * variablez;
 
 	System.out.printf(" your answer is %s%n" , result);
 

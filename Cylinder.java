@@ -15,10 +15,10 @@ import java.util.Scanner;
 
 
 	System.out.print("Enter the radius of the cylinder: ");
-	radius = calculation.nextInt();
+	radius = calculation.nextDouble();
 
 	System.out.println("Enter the length: " );
-	length = calculation.nextInt();
+	length = calculation.nextDouble();
 
 	double area = PIE * (radius * radius);
 	System.out.println("The area of the cylinder is: " + area);
