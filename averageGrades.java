@@ -4,7 +4,8 @@ public class averageGrades {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
        double result = 0;
-        int count = 1;
+        int count = 0;
+
         while(count <= 10){
             System.out.println("Enter students score: ");
             double score = input.nextDouble();
@@ -13,7 +14,7 @@ public class averageGrades {
             count ++;
         }
 
-        double average = result/10.0;
+        double average = result/ (count)*1.0;
                 System.out.print("Average equals: " + average);
     }
 
