@@ -9,9 +9,15 @@ public class averageGrades {
         while(count <= 10){
             System.out.println("Enter students score: ");
             double score = input.nextDouble();
-            if (score >= 1 && score <= 100)
+            if (score >= 1 && score <= 100) {
                 result += score;
-            count ++;
+            }
+            else
+                if(score == -1){
+                    break;
+                }
+                count++;
+
         }
 
         double average = result/ (count)*1.0;
