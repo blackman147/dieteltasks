@@ -11,26 +11,12 @@ public class TwelveDaysOfChristmas {
                 System.out.print("On the " + day);
 
 
-
-
-
-
-            switch (day){
-                case 1:
-                    System.out.println("st");
-                    break;
-
-                case 2:
-                    System.out.println("nd");
-                    break;
-                case 3:
-                    System.out.println("rd");
-                    break;
-
-                default:
-                    System.out.println("th");
-
-            }
+                switch (day) {
+                    case 1 -> System.out.println("st");
+                    case 2 -> System.out.println("nd");
+                    case 3 -> System.out.println("rd");
+                    default -> System.out.println("th");
+                }
                 System.out.println("day of christmas my true love sent to me");
 
             switch (day){
