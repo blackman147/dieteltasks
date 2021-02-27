@@ -31,7 +31,7 @@ public class TwelveDaysOfChristmas {
                     System.out.println("th");
 
             }
-                System.out.println("day of christmas my true love sent to me");
+                System.out.println("day of christmas my true love gave to me");
 
             switch (day){
                 case 12:
