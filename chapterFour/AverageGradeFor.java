@@ -8,15 +8,14 @@ public class AverageGradeFor {
         double result = 0;
         int count = 0;
 
-        for( count=0; count < 10; count++){
+        for( count=0; count < 10; ){
             System.out.println("Enter students score: ");
             double score = input.nextDouble();
-            if (score >= 1 && score <= 100) {
+            if (score >= 0)  {
                 result += score;
+                count++;
             }
-            else
-            if(score != count){
-
+            else {
                 System.out.println("this is an in valid input");
             }
 
