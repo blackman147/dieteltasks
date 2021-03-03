@@ -8,10 +8,11 @@ public class loops<i> {
        //     System.out.print(i + " ");
 
 
-        for( int i = 0; i<=100; ) {
+      /**  for( int i = 0; i<=100; ) {
 
             i += 2;
             System.out.print(i + " ");
-        }
+        }**/
+
     }
 }
