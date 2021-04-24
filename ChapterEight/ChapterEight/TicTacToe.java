@@ -1,7 +1,7 @@
 package ChapterEight;
 
 public class TicTacToe {
-    private final char[][] gameBoard = new char[3][3];
+    private final char [][] gameBoard = new char[3][3];
 
 
     public TicTacToe() {
@@ -31,6 +31,7 @@ public class TicTacToe {
        int column =(playPosition -1) % 3;
        if (gameBoard[row][column] == ' ')
            gameBoard[row][column] = 'X';
+
     }
 
     public boolean hasEnded() {
@@ -44,4 +45,24 @@ public class TicTacToe {
         }
         return true;
     }
+
+    public void playMoveTwo(int playPosition) {
+        int row = (playPosition - 1)/ 3;
+        int column =(playPosition -1) % 3;
+        if (gameBoard[row][column] == ' ')
+            gameBoard[row][column] = ' ';
+    }
+
+//    public void checkWinner() {
+//        for (int i = 0; i < 3; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                if (gameBoard[i][j] == )
+//
+//            }
+//
+//        }
+//
+//
+//    }
+
 }

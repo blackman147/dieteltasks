@@ -30,17 +30,27 @@ public class TicTacToeTest {
         ticTacToe.playMove(1);
         assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
     }
+    @Test
+    void twoUsersCanPlayGame(){
+        ticTacToe.playMove(1);
+        assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playMoveTwo(5);
+        assertEquals("|X| | |\n| |O| |\n| | | |", ticTacToe.visualizeGameBoard());
+    }
 
     @Test
-    void userCanPlayGameMultipleTimes(){
+    void usersCanPlayGameMultipleTimes(){
         ticTacToe.playMove(1);
         assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
 
-        ticTacToe.playMove(6);
-        assertEquals("|X| | |\n| | |X|\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playMoveTwo(6);
+        assertEquals("|X| | |\n| | |O|\n| | | |", ticTacToe.visualizeGameBoard());
 
         ticTacToe.playMove(7);
-        assertEquals("|X| | |\n| | |X|\n|X| | |", ticTacToe.visualizeGameBoard());
+        assertEquals("|X| | |\n| | |O|\n|X| | |", ticTacToe.visualizeGameBoard());
+
+        ticTacToe.playMoveTwo(3);
+        assertEquals("|X| |O|\n| | |O|\n|X| | |", ticTacToe.visualizeGameBoard());
     }
 
     @Test
@@ -75,5 +85,25 @@ public class TicTacToeTest {
         ticTacToe.playMove(1);
         assertTrue(ticTacToe.hasEnded());
     }
+
+
+    @Test
+    void usersCanWinOnASingleColumn(){
+        ticTacToe.playMove(1);
+        assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playMoveTwo(3);
+        assertEquals("|X| |O|\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playMove(5);
+        assertEquals("|X| |O|\n| |X| |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playMoveTwo(7);
+        assertEquals("|X| |O|\n| |X| |\n|O| | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playMove(9);
+        assertEquals("|X| |O|\n| |X| |\n|O| |X|", ticTacToe.visualizeGameBoard());
+
+        ticTacToe.checkWinner();
+        assertEquals("Winner", (ticTacToe.getcheckWinner()));
+    }
+
+
 
 }
