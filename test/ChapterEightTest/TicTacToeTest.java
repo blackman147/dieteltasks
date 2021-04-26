@@ -27,81 +27,100 @@ public class TicTacToeTest {
 
     @Test
     void userCanPlayGame(){
-        ticTacToe.playMove(1);
+        ticTacToe.playerOne(1);
         assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
     }
     @Test
     void twoUsersCanPlayGame(){
-        ticTacToe.playMove(1);
+        ticTacToe.playerOne(1);
         assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMoveTwo(5);
+        ticTacToe.playerTwo(5);
         assertEquals("|X| | |\n| |O| |\n| | | |", ticTacToe.visualizeGameBoard());
     }
 
     @Test
     void usersCanPlayGameMultipleTimes(){
-        ticTacToe.playMove(1);
+        ticTacToe.playerOne(1);
         assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
 
-        ticTacToe.playMoveTwo(6);
+        ticTacToe.playerTwo(6);
         assertEquals("|X| | |\n| | |O|\n| | | |", ticTacToe.visualizeGameBoard());
 
-        ticTacToe.playMove(7);
+        ticTacToe.playerOne(7);
         assertEquals("|X| | |\n| | |O|\n|X| | |", ticTacToe.visualizeGameBoard());
 
-        ticTacToe.playMoveTwo(3);
+        ticTacToe.playerTwo(3);
         assertEquals("|X| |O|\n| | |O|\n|X| | |", ticTacToe.visualizeGameBoard());
     }
 
     @Test
     void gameCanOnlyAllowUserPlayInEmptySpaces(){
-        ticTacToe.playMove(1);
+        ticTacToe.playerOne(1);
         assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
     }
     @Test
     void gameKnowsWhenTheBoardHasNoEmptySpace(){
         assertFalse(ticTacToe.hasEnded());
 
-        ticTacToe.playMove(1);
+        ticTacToe.playerOne(1);
         assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
 
-        ticTacToe.playMove(2);
+        ticTacToe.playerOne(2);
         assertEquals("|X|X| |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(3);
+        ticTacToe.playerOne(3);
         assertEquals("|X|X|X|\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(4);
+        ticTacToe.playerOne(4);
         assertEquals("|X|X|X|\n|X| | |\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(5);
+        ticTacToe.playerOne(5);
         assertEquals("|X|X|X|\n|X|X| |\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(6);
+        ticTacToe.playerOne(6);
         assertEquals("|X|X|X|\n|X|X|X|\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(7);
+        ticTacToe.playerOne(7);
         assertEquals("|X|X|X|\n|X|X|X|\n|X| | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(8);
+        ticTacToe.playerOne(8);
         assertEquals("|X|X|X|\n|X|X|X|\n|X|X| |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(9);
+        ticTacToe.playerOne(9);
         assertEquals("|X|X|X|\n|X|X|X|\n|X|X|X|", ticTacToe.visualizeGameBoard());
 
-        ticTacToe.playMove(1);
+        ticTacToe.playerOne(1);
         assertTrue(ticTacToe.hasEnded());
     }
 
 
     @Test
     void usersCanWinOnASingleColumn(){
-        ticTacToe.playMove(1);
+        ticTacToe.playerOne(1);
         assertEquals("|X| | |\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMoveTwo(3);
+        ticTacToe.playerTwo(3);
         assertEquals("|X| |O|\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(5);
-        assertEquals("|X| |O|\n| |X| |\n| | | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMoveTwo(7);
-        assertEquals("|X| |O|\n| |X| |\n|O| | |", ticTacToe.visualizeGameBoard());
-        ticTacToe.playMove(9);
-        assertEquals("|X| |O|\n| |X| |\n|O| |X|", ticTacToe.visualizeGameBoard());
+        ticTacToe.playerOne(4);
+        assertEquals("|X| |O|\n|X| | |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playerTwo(8);
+        assertEquals("|X| |O|\n|X| | |\n| |O| |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playerOne(7);
+        assertEquals("|X| |O|\n|X| | |\n|X|O| |", ticTacToe.visualizeGameBoard());
 
         ticTacToe.checkWinner();
-        assertEquals("Winner", (ticTacToe.getcheckWinner()));
+        assertEquals("X",ticTacToe.getWinner());
+    }
+
+    @Test
+    void usersCanWinDiagonally(){
+        ticTacToe.playerOne(3);
+        assertEquals("| | |X|\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playerTwo(1);
+        assertEquals("|O| |X|\n| | | |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playerOne(4);
+        assertEquals("|O| |X|\n|X| | |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playerTwo(5);
+        assertEquals("|O| |X|\n|X|O| |\n| | | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playerOne(7);
+        assertEquals("|O| |X|\n|X|O| |\n|X| | |", ticTacToe.visualizeGameBoard());
+        ticTacToe.playerTwo(9);
+        assertEquals("|O| |X|\n|X|O| |\n|X| |O|", ticTacToe.visualizeGameBoard());
+
+        ticTacToe.checkWinner();
+        assertEquals("O",ticTacToe.getWinner());
     }
 
 
