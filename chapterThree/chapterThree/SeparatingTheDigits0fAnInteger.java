@@ -2,7 +2,8 @@ package chapterThree;
 
 import java.util.Scanner;
 
-public class SepartingTheDigits0fAninteger {
+public class SeparatingTheDigits0fAnInteger {
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a five digit Number: ");

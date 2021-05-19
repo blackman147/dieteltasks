@@ -18,13 +18,8 @@ public class AverageGradeFor {
             else {
                 System.out.println("this is an in valid input");
             }
-
-
         }
-
         double average = result/ (count)*1.0;
         System.out.print("Average equals: " + average);
     }
-
-
 }
