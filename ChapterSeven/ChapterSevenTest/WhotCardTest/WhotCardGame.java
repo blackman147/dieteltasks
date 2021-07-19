@@ -1,4 +1,4 @@
-package ChapterSevenTest.WhotCard;
+package ChapterSevenTest.WhotCardTest;
 
 public class WhotCardGame {
 

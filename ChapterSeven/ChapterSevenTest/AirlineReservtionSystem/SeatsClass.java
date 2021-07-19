@@ -1,5 +1,5 @@
 package ChapterSevenTest.AirlineReservtionSystem;
 
-public enum Seats {
+public enum SeatsClass {
     FIRSTCLASS, ECONOMYCLASS;
 }

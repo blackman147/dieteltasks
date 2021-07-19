@@ -1,4 +1,4 @@
-package PersonalKata;
+package PersonalKata.turtle_graphics;
 
 public class Pen {
     private boolean isPenUp;

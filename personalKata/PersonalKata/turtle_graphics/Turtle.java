@@ -1,4 +1,6 @@
-package PersonalKata;
+package PersonalKata.turtle_graphics;
+
+import PersonalKata.Directions;
 
 import static PersonalKata.Directions.*;
 

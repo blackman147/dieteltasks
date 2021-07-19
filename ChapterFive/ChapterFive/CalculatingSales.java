@@ -87,7 +87,7 @@ public class CalculatingSales {
             productNumber = scan.nextInt ();
         }
 
-        System.out.println ("The total amount of product selected  is: " + product );
+        System.out.println ("The total amount of products selected  is: " + product );
 
 
 

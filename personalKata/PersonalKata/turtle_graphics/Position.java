@@ -1,6 +1,4 @@
-package PersonalKata;
-
-import java.util.Objects;
+package PersonalKata.turtle_graphics;
 
 public class Position {
     private  int rowPosition;
