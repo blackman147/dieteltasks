@@ -1,2 +1,5 @@
-package ChapterSeven;public enum CrapStatus {
+package ChapterSeven;
+
+public enum CrapStatus {
+    NEW, WON, LOST, CONTINUE;
 }

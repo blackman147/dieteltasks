@@ -69,4 +69,32 @@ public class CardTest {
        assertThrows(InvalidCardException.class, ()-> new Card(CLUBS, 0));
     }
 
+    @Test
+    void cardToStringTest(){
+        Card card = new Card (DIAMOND, 13);
+        String expectedToString = "King of Diamond";
+        assertEquals (expectedToString, card.toString ());
+        card = new Card (CLUBS,1);
+        expectedToString = "Ace of Clubs";
+        assertEquals (expectedToString, card.toString ());
+    }
+
+    @Test
+    void testSameCardValueEquals(){
+        Card kingOfSpades = new Card (SPADES, 13);
+        Card kingOfSDiamonds = new Card (DIAMOND, 13);
+        assertEquals (kingOfSpades,kingOfSDiamonds);
+    }
+
+    @Test
+    void testSameSuitValueEquals(){
+        Card kingOfSpades = new Card (SPADES, 13);
+        Card queenOfSpades = new Card (SPADES, 12);
+        assertEquals (queenOfSpades, kingOfSpades);
+        assertEquals (kingOfSpades, queenOfSpades);
+//        CardDeck cardDeck = new CardDeck (2);
+//        assertNotEquals (kingOfSpades, cardDeck);
+    }
+
+
 }
