@@ -28,7 +28,7 @@ public class GasMileage {
 
 
        }
-        if(milesDriven > 0 && gallonsUsed > 0 ) {
+        if(milesDriven == -1 && gallonsUsed == -1 ) {
             System.out.println("In this trip you have used " + milesPerGallons + " Miles per gallon");
             System.out.println("your total miles  per gallon is: " + totalMilesPerGallons);
         }
