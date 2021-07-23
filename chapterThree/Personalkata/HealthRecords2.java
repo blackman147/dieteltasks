@@ -1,6 +1,6 @@
 package Personalkata;
 
-public class HealthRecords {
+public class HealthRecords2 {
     private String firstName;
     private String lastName;
     private String gender;
@@ -12,8 +12,9 @@ public class HealthRecords {
     int age;
     int maximumHeartRate;
     double targetHeartRate;
+    double bmi;
 
-    public HealthRecords(String firstName, String lastName, String gender, int day, int month, int yearOfBirth, double height, double weight) {
+    public HealthRecords2(String firstName, String lastName, String gender, int day, int month, int yearOfBirth, double height, double weight) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -105,6 +106,11 @@ public class HealthRecords {
     public double targetHeartRate(){
         targetHeartRate = 0.67 * maximumHeartRate;
         return targetHeartRate;
+    }
+
+    public double calculateBmi(){
+        bmi = (weight * 703)/(height * height);
+        return bmi;
     }
 
 }

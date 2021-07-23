@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HealthRecordsTest {
     public static void main(String[] args) {
-        HealthRecords healthRecords = new HealthRecords("firstname", "lastname", "male", 170.00, 80.00);
+        HealthRecords2 healthRecords = new HealthRecords2 ("firstname", "lastname", "male", 170.00, 80.00);
         Scanner userInput = new Scanner(System.in);
 
         System.out.println("Enter your first name: " );

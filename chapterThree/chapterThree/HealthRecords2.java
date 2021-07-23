@@ -1,6 +1,6 @@
 package chapterThree;
 
-public class HealthRecords {
+public class HealthRecords2 {
 
     private String firstName;
     private String lastName;
@@ -15,7 +15,7 @@ public class HealthRecords {
     double targetHeartRate;
     double bodyMassIndex;
 
-    public HealthRecords(String firstName, String lastName, String gender, double height, double weight) {
+    public HealthRecords2(String firstName, String lastName, String gender, double height, double weight) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;

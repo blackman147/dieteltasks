@@ -1,38 +1,38 @@
-//package chapterFour;
-//
-//import java.util.Scanner;
-//
-//public class CreditLimitCalculator {
-//
-//        public static void Main(String[] args) {
-//
-//            int currentBalance;
-//            int totalCharges;
-//            int totalCredits;
-//
-//
-//            Scanner input = new Scanner(System.in);
-//
-//            System.out.println("Enter Customer's Account Number: ");
-//            accountNumber = input.nextInt();
-//
-//            System.out.println("Enter Customer's balance: ");
-//            currentBalance = input.nextInt();
-//
-//            System.out.println("Enter Total Charged By Customer this Month: ");
-//            totalCharges = input.nextInt();
-//
-//            System.out.println("Enter Total Customer Credits For This Month: ");
-//            totalCredits = input.nextInt();
-//
-//            int newBalance = currentBalance + (totalCharges - totalCredits);
-//            System.out.println("Customer's new account balance is : " + newBalance);
-//
-//            if (newBalance > totalCredits )
-//                System.out.println("Customer is within credit limit");
-//            else if
-//            (newBalance < totalCredits)
-//                System.out.println("Credit limit exceeded");
-//        }
-//    }
-//
+package chapterFour;
+
+import java.util.Scanner;
+
+public class CreditLimitCalculator {
+
+        public static void Main(String[] args) {
+            int accountNumber;
+            int currentBalance;
+            int totalCharges;
+            int totalCredits;
+
+
+            Scanner input = new Scanner(System.in);
+
+            System.out.println("Enter Customer's Account Number: ");
+            accountNumber = input.nextInt();
+
+            System.out.println("Enter Customer's balance: ");
+            currentBalance = input.nextInt();
+
+            System.out.println("Enter Total Charged By Customer this Month: ");
+            totalCharges = input.nextInt();
+
+            System.out.println("Enter Total Customer Credits For This Month: ");
+            totalCredits = input.nextInt();
+
+            int newBalance = currentBalance + (totalCharges - totalCredits);
+            System.out.println("Customer's new account balance is : " + newBalance);
+
+            if (newBalance > totalCredits )
+                System.out.println("Customer is within credit limit");
+            else if
+            (newBalance < totalCredits)
+                System.out.println("Credit limit exceeded");
+        }
+    }
+
